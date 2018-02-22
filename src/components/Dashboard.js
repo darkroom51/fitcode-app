@@ -58,14 +58,14 @@ class Dashboard extends Component {
                             <Col xs={12} md={6} lg={6}>
                                 <h3 style={{color:"#777"}}>Biggest foodies db in our galaxy</h3>
                                 <div style={{overflow:'hidden', textAlign:'center'}}>
-                                    <RadialBarChart width={300} height={160} cx={150} cy={150} innerRadius={20} outerRadius={140} barSize={20} data={[
+                                    <RadialBarChart width={300} height={160} cx={150} cy={20} innerRadius={20} outerRadius={140} barSize={20} data={[
                                         {name: 'Vege-Food', uv: foodCount[5], fill: '#83a6ed'},
                                         {name: 'Nabiał', uv: foodCount[4], fill: '#8dd1e1'},
                                         {name: 'Ryby', uv: foodCount[3], fill: '#82ca9d'},
                                         {name: 'Mięso', uv: foodCount[2],  fill: '#a4de6c'},
                                         {name: 'Owoce', uv: foodCount[1],  fill: '#d0ed57'},
                                         {name: 'Warzywa', uv: foodCount[0],  fill: '#9eed46'}
-                                    ]} startAngle={180} endAngle={0} style={{display:'inline-block'}}>
+                                    ]} startAngle={180} endAngle={360} style={{display:'inline-block'}}>
                                         <RadialBar minAngle={15} label={{ fill: '#666', position: 'insideStart' }} background clockWise={true} dataKey='uv'/>
                                     </RadialBarChart>
                                     <div style={{margin:'20px 0 20px 0', fontSize:'14px', color:'#777'}}>
@@ -86,22 +86,18 @@ class Dashboard extends Component {
                                 <h3 style={{color:"#777"}}>Biggest users count in entire universe</h3>
                                 <div style={{overflow:'hidden', textAlign:'center'}}>
                                     <RadialBarChart width={300} height={160} cx={150} cy={20} innerRadius={20} outerRadius={140} barSize={20} data={[
-                                        {name: 'Week 1', uv: 1, fill: '#83a6ed'},
-                                        {name: 'Week 2', uv: 2, fill: '#8dd1e1'},
-                                        {name: 'Week 3', uv: 3, fill: '#82ca9d'},
-                                        {name: 'Week 4', uv: 4,  fill: '#a4de6c'},
-                                        {name: 'Week 5', uv: 5,  fill: '#d0ed57'},
+                                        {name: 'Week 3', uv: 4, fill: '#82ca9d'},
+                                        {name: 'Week 4', uv: 5,  fill: '#a4de6c'},
+                                        {name: 'Week 5', uv: 6,  fill: '#d0ed57'},
                                         {name: 'Now', uv: this.actualNumberOFusers(),  fill: '#9eed46'}
                                     ]} startAngle={180} endAngle={360} style={{display:'inline-block'}}>
                                         <RadialBar minAngle={15} label={{ fill: '#666', position: 'insideStart' }} background clockWise={true} dataKey='uv'/>
                                     </RadialBarChart>
                                     <div style={{margin:'20px 0 20px 0', fontSize:'14px', color:'#777'}}>
                                         <span style={{borderBottom: '5px solid #9eed46', display:'inline-block', marginTop: 5}}>Now: {this.actualNumberOFusers()}</span>&nbsp;&nbsp;
-                                        <span style={{borderBottom: '5px solid #d0ed57'}}>Week5: 5</span>&nbsp;&nbsp;
-                                        <span style={{borderBottom: '5px solid #a4de6c'}}>Week4: 4</span>&nbsp;&nbsp;
-                                        <span style={{borderBottom: '5px solid #82ca9d'}}>Week3: 3</span>&nbsp;&nbsp;
-                                        <span style={{borderBottom: '5px solid #8dd1e1'}}>Week2: 2</span>&nbsp;&nbsp;
-                                        <span style={{borderBottom: '5px solid #83a6ed'}}>Week1: 1</span>
+                                        <span style={{borderBottom: '5px solid #d0ed57'}}>Week3: 6</span>&nbsp;&nbsp;
+                                        <span style={{borderBottom: '5px solid #a4de6c'}}>Week2: 5</span>&nbsp;&nbsp;
+                                        <span style={{borderBottom: '5px solid #82ca9d'}}>Week1: 4</span>
                                     </div>
                                     <div style={{margin:'20px 0 20px 0', fontSize:'14px', color:'#777'}}>
                                         Total: {this.actualNumberOFusers()} :)
@@ -109,29 +105,6 @@ class Dashboard extends Component {
                                 </div>
                                 <Divider style={{margin:'0 0 20px 0'}} />
                             </Col>
-                            {/*<Col xs={12} md={12} lg={12}>*/}
-                                {/*<h3 style={{color:"#777"}}>Happy users</h3>*/}
-                                {/*<div style={{overflow:'hidden', textAlign:'center'}}>*/}
-                                    {/*<RadialBarChart width={300} height={160} cx={150} cy={0} innerRadius={20} outerRadius={140} barSize={20} data={[*/}
-                                        {/*{name: 'Week 1', uv: 1, fill: '#83a6ed'},*/}
-                                        {/*{name: 'Week 2', uv: 2, fill: '#8dd1e1'},*/}
-                                        {/*{name: 'Week 3', uv: 3, fill: '#82ca9d'},*/}
-                                        {/*{name: 'Week 4', uv: 4,  fill: '#a4de6c'}*/}
-                                    {/*]} startAngle={180} endAngle={360} style={{display:'inline-block'}}>*/}
-                                        {/*<RadialBar minAngle={15} label={{ fill: '#666', position: 'insideStart' }} background clockWise={true} dataKey='uv'/>*/}
-                                    {/*</RadialBarChart>*/}
-                                    {/*<div style={{margin:'20px 0 20px 0', fontSize:'14px', color:'#777'}}>*/}
-                                        {/*<span style={{borderBottom: '5px solid #9eed46', display:'inline-block', marginTop: 5}}>Now: {this.actualNumberOFusers()}</span>&nbsp;&nbsp;*/}
-                                        {/*<span style={{borderBottom: '5px solid #d0ed57'}}>Then: 5</span>&nbsp;&nbsp;*/}
-                                        {/*<span style={{borderBottom: '5px solid #a4de6c'}}>Before: 4</span>&nbsp;&nbsp;*/}
-                                        {/*<span style={{borderBottom: '5px solid #82ca9d'}}>After: 3</span>&nbsp;&nbsp;*/}
-                                    {/*</div>*/}
-                                    {/*<div style={{margin:'20px 0 20px 0', fontSize:'14px', color:'#777'}}>*/}
-                                        {/*Total: {this.actualNumberOFusers()} :)*/}
-                                    {/*</div>*/}
-                                {/*</div>*/}
-                                {/*<Divider style={{margin:'0 0 20px 0'}} />*/}
-                            {/*</Col>*/}
                         </Row>
                     </Grid>
                 </Paper>
