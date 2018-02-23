@@ -44,10 +44,10 @@ class Dashboard extends Component {
         return (
             <div style={{textAlign: "center"}}>
                 <Paper style={{margin: 20, padding: 20}} zDepth={2}>
-                    <h1 style={{color:"#777"}}>Welcome to FitCode AppNG</h1>
-                    <h3 style={{color:"#777"}}>All fit foodies under one buttON ;)</h3>
+                    <h1 style={{color:"#777"}}>Witaj w FitCodeApp10k</h1>
+                    <h3 style={{color:"#777"}}>Najfit produkty ander łan buttON ;)</h3>
                     <Link to="/food-list">
-                        <RaisedButton label="See our foodies" primary={true} style={style}/>
+                        <RaisedButton label="Nasze produkty" primary={true} style={style}/>
                     </Link>
                 </Paper>
 
@@ -56,7 +56,7 @@ class Dashboard extends Component {
                     <Grid>
                         <Row>
                             <Col xs={12} md={6} lg={6}>
-                                <h3 style={{color:"#777"}}>Biggest foodies db in our galaxy</h3>
+                                <h3 style={{color:"#777"}}>Największa baza produktów w galaktyce</h3>
                                 <div style={{overflow:'hidden', textAlign:'center'}}>
                                     <RadialBarChart width={300} height={160} cx={150} cy={20} innerRadius={20} outerRadius={140} barSize={20} data={[
                                         {name: 'Vege-Food', uv: foodCount[5], fill: '#83a6ed'},
@@ -77,13 +77,13 @@ class Dashboard extends Component {
                                         <span style={{borderBottom: '5px solid #83a6ed'}}>Vege-Food: {foodCount[5]}</span>
                                     </div>
                                     <div style={{margin:'20px 0 20px 0', fontSize:'14px', color:'#777'}}>
-                                        Total: {foodCountTotal} :)
+                                        Razem: {foodCountTotal} :)
                                     </div>
                                 </div>
                                 <Divider style={{margin:'0 0 20px 0'}} />
                             </Col>
                             <Col xs={12} md={6} lg={6}>
-                                <h3 style={{color:"#777"}}>Biggest users count in entire universe</h3>
+                                <h3 style={{color:"#777"}}>Najwiecej użytkowników w całym wszechświecie</h3>
                                 <div style={{overflow:'hidden', textAlign:'center'}}>
                                     <RadialBarChart width={300} height={160} cx={150} cy={20} innerRadius={20} outerRadius={140} barSize={20} data={[
                                         {name: 'Week 3', uv: 4, fill: '#82ca9d'},
@@ -94,13 +94,13 @@ class Dashboard extends Component {
                                         <RadialBar minAngle={15} label={{ fill: '#666', position: 'insideStart' }} background clockWise={true} dataKey='uv'/>
                                     </RadialBarChart>
                                     <div style={{margin:'20px 0 20px 0', fontSize:'14px', color:'#777'}}>
-                                        <span style={{borderBottom: '5px solid #9eed46', display:'inline-block', marginTop: 5}}>Now: {this.actualNumberOFusers()}</span>&nbsp;&nbsp;
-                                        <span style={{borderBottom: '5px solid #d0ed57'}}>Week3: 6</span>&nbsp;&nbsp;
-                                        <span style={{borderBottom: '5px solid #a4de6c'}}>Week2: 5</span>&nbsp;&nbsp;
-                                        <span style={{borderBottom: '5px solid #82ca9d'}}>Week1: 4</span>
+                                        <span style={{borderBottom: '5px solid #9eed46', display:'inline-block', marginTop: 5}}>Teraz: {this.actualNumberOFusers()}</span>&nbsp;&nbsp;
+                                        <span style={{borderBottom: '5px solid #d0ed57'}}>Tydz3: 6</span>&nbsp;&nbsp;
+                                        <span style={{borderBottom: '5px solid #a4de6c'}}>Tydz2: 5</span>&nbsp;&nbsp;
+                                        <span style={{borderBottom: '5px solid #82ca9d'}}>Tydz1: 4</span>
                                     </div>
                                     <div style={{margin:'20px 0 20px 0', fontSize:'14px', color:'#777'}}>
-                                        Total: {this.actualNumberOFusers()} :)
+                                        Razem: {this.actualNumberOFusers()} :)
                                     </div>
                                 </div>
                                 <Divider style={{margin:'0 0 20px 0'}} />

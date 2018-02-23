@@ -105,7 +105,7 @@ class MealAdd extends React.Component {
                         </div>
                 }
                 <Dialog
-                    title="Dodaj jedzonko do posilku"
+                    title="Dodaj produkt do posilku"
                     actions={actions}
                     modal={false}
                     open={this.state.open}

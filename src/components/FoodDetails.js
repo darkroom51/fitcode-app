@@ -39,14 +39,16 @@ class FoodDetails extends React.Component {
                         .map(
                             ([key, product]) =>
                                 <div key={key}>
-                                    <h2>Nazwa : {product.name.toUpperCase()}</h2>
-                                    <p>Kategoria: {product.category}</p>
-                                    <p>Kalorie: {product.energy}</p>
-                                    <p>Proteiny: {product.protein}</p>
-                                    <p>Tluszcz: {product.fat}</p>
-                                    <p>Weglowodany: {product.carbohydrate}</p>
-                                    <p>Cukry: {product.sugars}</p>
-                                    <p style={{textAlign:'center'}}>
+                                    <h2><span style={{color:'#777'}}>Nazwa:</span> {product.name.toUpperCase()}</h2>
+                                    <p>
+                                        <span style={{color:'#777'}}>Kategoria:</span> {product.category}<br />
+                                        <span style={{color:'#777'}}>Kalorie:</span> {product.energy}<br />
+                                        <span style={{color:'#777'}}>Proteiny:</span> {product.protein}<br />
+                                        <span style={{color:'#777'}}>Tluszcze:</span> {product.fat}<br />
+                                        <span style={{color:'#777'}}>Weglowodany:</span> {product.carbohydrate}<br />
+                                        <span style={{color:'#777'}}>Cukry:</span> {product.sugars}
+                                    </p>
+                                    <p style={{textAlign:'center', marginTop:30}}>
                                         <img
                                             src={product.photo === undefined ? `https://jfddl3-fitcode.firebaseapp.com/img/noimage.png` : `${product.photo}`}
                                             alt=""
