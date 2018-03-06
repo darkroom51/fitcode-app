@@ -1,6 +1,7 @@
 # Fitcode React + Redux + Firebase App :shipit:
 
-
+Final version of our Fitcode team app.
+Note: this is sligtly modifed version of our app. Hopefully will be slowly brushed up more an more.
 
 ## Installation
 Node.js needed.
